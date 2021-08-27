@@ -46,5 +46,9 @@ const getPokemonData = async (term) => {
         Math.random() * 200 + 1
     )
 }
+/* @desc event listener for the clicking of button
+    which searches for the query input in accordance to the search term which
+    we defined on the very first line
 
+*/
 search_btn.addEventListener("click", () => getPokemonData(search_term.value))
