@@ -1,0 +1,14 @@
+img {
+    width: 80%;
+    padding: 60px;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+.search-container {
+    display: flex;
+    margin: 10px;
+    width: 80%;
+}
