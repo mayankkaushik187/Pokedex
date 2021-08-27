@@ -12,6 +12,33 @@ img {
     margin: 10px;
     width: 80%;
 }
+input:focus {
+    border: 1px solid #22cba8;
+    box-shadow: none !important;
+}
+.btn-search {
+    border: none;
+    padding-bottom: 10px 25px;
+    border-radius: 0 5px 5px 0;
+    background-color: #22cba8;
+    color: #fff;
+    margin-left: -15px;
+    cursor: pointer;
+}
+.no-border {
+    border: none !important;
+}
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+    background-color: #efefef;
+    color: #406163;
+}
+
 .pokemon-card {
     display: flex;
     flex-direction: column;
@@ -63,7 +90,7 @@ img {
 .btn-transfer {
     margin: 45px 0;
     padding: 15px 30px;
-    background: linear-gradient(to right, #9eda93, #22cba8);
+    background: linear-gradient(to right, #83c479, #42d6b8);
     border-radius: 25px;
     border: none;
     color: #fff;

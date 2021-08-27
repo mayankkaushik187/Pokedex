@@ -1,12 +1,16 @@
-const search_term = document.getElementById("search_q")
-const search_btn = document.getElementById("search-btn")
+/*API_USED_FOR_THE_PROJECT
+    _URL_ = https://pokeapi.co/api/v2/pokemon/ditto
+*/
+
+const search_term = document.getElementById("search_q") //The value or string that user types in.
+const search_btn = document.getElementById("search-btn") //@desc button for the search bar
 
 // api https://pokeapi.co/docs/v2#pokemon
 const getPokemonData = async (term) => {
     document.getElementById("show_error").classList.remove("show")
     document.getElementById("show_error").classList.add("hidden")
 
-    const url = `https://pokeapi.co/api/v2/pokemon/${term}`
+    const url = `https://pokeapi.co/api/v2/pokemon/${term}` //access every pokemon by its name
     const response = await fetch(url)
 
     if (response.status == 404 || response.statusText == "Not Found") {
@@ -15,11 +19,11 @@ const getPokemonData = async (term) => {
         return
     }
     const pokemon = await response.json()
-    debugger
+    debugger //BREAKPOINT
 
     document
         .getElementById("update_img")
-        .setAttribute("src", pokemon.sprites.other.dream_world.front_default)
+        .setAttribute("src", pokemon.sprites.other.dream_world.front_default) //Destructuring through the pokemon object to get IMG
     document.getElementById("update_name").innerHTML = pokemon.name
     document.getElementById(
         "update_candy_title"
